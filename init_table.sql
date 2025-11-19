@@ -34,3 +34,8 @@ CREATE TABLE IF NOT EXISTS configs (
 
 -- 设置初始化标志
 INSERT INTO configs (key, value) VALUES ('DB_INITIALIZED', 'true');
+
+
+
+CREATE INDEX IF NOT EXISTS idx_groups_is_public ON groups(is_public);
+CREATE INDEX IF NOT EXISTS idx_sites_is_public ON sites(is_public);
